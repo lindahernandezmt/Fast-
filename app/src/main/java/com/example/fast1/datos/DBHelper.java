@@ -25,12 +25,20 @@ public class DBHelper extends SQLiteOpenHelper {
                 "IMAGE BLOB," +
                 "DESCRIPTION VARCHAR," +
                 "PRICE STRING)");
+        db.execSQL("CREATE TABLE SUCURSALES(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "name VARCHAR," +
+                    "description VARCHAR," +
+                    "location VARCHAR," +
+                    "image BLOB" +
+                    ")");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS PRODUCTOS");
+        db.execSQL("DROP TABLE IF EXISTS SUCURSALES");
     }
 
     //Funciones presonalizadas
@@ -47,8 +55,26 @@ public class DBHelper extends SQLiteOpenHelper {
         statement.executeInsert();
     }
 
+    public void insertSucursal(String name, String description, String localization, byte[] image, String table){
+        String sql = "INSERT INTO "+ table +" VALUES(null, ?, ?, ?, ?)";
+        SQLiteStatement statement = sqLiteDatabase.compileStatement(sql);
+        statement.clearBindings();
+
+        statement.bindString(1, name);
+        statement.bindString(2, description);
+        statement.bindString(3, localization);
+        statement.bindBlob(4, image);
+
+        statement.executeInsert();
+    }
+
     public Cursor getProductos(){
         Cursor cursor= sqLiteDatabase.rawQuery("SELECT * FROM PRODUCTOS", null);
+        return cursor;
+    }
+
+    public Cursor getSucursales(){
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM SUCURSALES", null);
         return cursor;
     }
 

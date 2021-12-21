@@ -46,6 +46,12 @@ public class MainActivity3 extends AppCompatActivity {
 
     ImageView productoImagen1, productoImagen2, productoImagen3;
 
+    String editId;
+    String editName;
+    String editDescription;
+    String editPrice;
+    byte[] imageInsert;
+
     private ImageView edtImage;
 
     private EditText edtName, edtDescription, edtPrice, edtId;
@@ -92,6 +98,14 @@ public class MainActivity3 extends AppCompatActivity {
         }
     }
 
+    public void llenarCampos(){
+        editId = edtId.getText().toString().trim();
+        editName = edtName.getText().toString().trim();
+        editDescription = edtDescription.getText().toString().trim();
+        editPrice = edtPrice.getText().toString().trim();
+        imageInsert = imageViewToByte(edtImage);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,6 +143,10 @@ public class MainActivity3 extends AppCompatActivity {
         layaoutButton= (LinearLayout) findViewById(R.id.layaoutButton);
         dbHelper = new DBHelper(getApplicationContext());
         casoUsoProductos = new casoUsoProductos();
+
+
+
+
 
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,6 +196,20 @@ public class MainActivity3 extends AppCompatActivity {
         btnActualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                llenarCampos();
+                try{
+                    dbHelper.updateProductos(
+                        edtId.getText().toString().toString(),
+                        editName,
+                        imageInsert,
+                        editDescription,
+                        editPrice
+                    );
+                    limpiarCampos();
+                    Toast.makeText(getApplicationContext(), "Cambios exitosos", Toast.LENGTH_SHORT).show();
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

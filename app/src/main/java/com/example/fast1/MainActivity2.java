@@ -9,6 +9,7 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -20,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.fast1.ui.SucursalForm;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -120,6 +122,8 @@ public class MainActivity2 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Toast.makeText(getApplicationContext(), "Va a servicios", Toast.LENGTH_SHORT).show();
+                        Intent intent= new Intent(MainActivity2.this, SucursalForm.class);
+                        startActivity(intent);
                     }
                 });
                 snackbar.show();
