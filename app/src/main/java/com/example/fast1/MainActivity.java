@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     private ActionBar actionBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,6 +22,11 @@
         android:orientation="vertical"
         android:padding="10px">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="match_parent"
@@ -53,8 +58,8 @@
 
                         <ImageView
                             android:id="@+id/inicio1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -105,8 +110,8 @@
 
                         <ImageView
                             android:id="@+id/imagen2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -155,8 +160,8 @@
 
                         <ImageView
                             android:id="@+id/imagen3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -205,8 +210,8 @@
 
                         <ImageView
                             android:id="@+id/imagen4"
-                            android:layout_width="match_parent"
-                            android:layout_height="145dp"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -245,7 +250,40 @@
 
             </TableLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/layaoutButton">
+
+            <Button
+                android:id="@+id/btnMensajes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Domicilios" />
+
+            <Button
+                android:id="@+id/btnNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Cliente Nuevo" />
+
+            <Button
+                android:id="@+id/btnDialogos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Compra" />
+        </LinearLayout>
     </LinearLayout>
+
     </LinearLayout>
     </ScrollView>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

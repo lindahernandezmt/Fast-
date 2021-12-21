@@ -53,8 +53,8 @@
 
                         <ImageView
                             android:id="@+id/inicio1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -96,8 +96,8 @@
 
                         <ImageView
                             android:id="@+id/imagen2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -139,8 +139,8 @@
 
                         <ImageView
                             android:id="@+id/imagen3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             tools:srcCompat="@tools:sample/avatars" />
 
                         <TextView
@@ -172,6 +172,151 @@
                 </TableRow>
 
             </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/cornSilk"
+                    android:fontFamily="@font/amita_bold"
+                    android:text="SUGIERENOS UN NUEVO PRODUCTO"
+                    android:textAlignment="center"
+                    android:textColor="#FF03DAC5" />
+
+                <Button
+                    android:id="@+id/btnChoose"
+                    android:layout_width="74dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="Seleccionar" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="30px">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edtImage"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:srcCompat="@drawable/ser1" />
+
+                        <EditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/amita"
+                            android:hint="Arepa"
+                            android:inputType="textPersonName"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="215dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="70px">
+
+                        <EditText
+                            android:id="@+id/edtDescription"
+                            android:layout_width="206dp"
+                            android:layout_height="56dp"
+                            android:background="@color/cornSilk"
+                            android:fontFamily="@font/corben"
+                            android:hint="Descripción"
+                            android:inputType="textPersonName"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="#E15353" />
+
+                        <EditText
+                            android:id="@+id/edtPrice"
+                            android:layout_width="204dp"
+                            android:layout_height="wrap_content"
+                            android:autoText="true"
+                            android:background="@color/cornSilk"
+                            android:hint="precio"
+                            android:inputType="textPersonName"
+                            android:text=""
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtId"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amita"
+                    android:hint="Id"
+                    android:inputType="textPersonName"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btnConsultar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Consultar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAgregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Agregar" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Eliminar" />
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Actualizar" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>
